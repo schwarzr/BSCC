@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "nbattleshipcodingcontest.runner": {
+      "version": "0.5.1-alpha",
+      "commands": [
+        "bscc"
+      ]
+    }
+  }
+}
