@@ -8,11 +8,11 @@ The code evolved over time and some of the commented sections are useless in the
 
 Method SimulateRandom() -> randomly pick possible ship placement combinations and rank the cells by overall density.
 
-Pro:
+**Pro:**
 
 Good results if you can simulate a large number of combinations.
 
-Con:
+**Con:**
 
 Slow and due to the large number of possible combinations an bad results if the simulation set is too small. 
 Results were mostly in the 40 – 41 avg. Shots per 500 games.
@@ -21,11 +21,11 @@ Results were mostly in the 40 – 41 avg. Shots per 500 games.
 
 Method CalculcateDensity() -> place ever remaining ship on every possible location and rank the cells by how often a ship was placed there.
 
-Pro:
+**Pro:**
 
 Mostly good results, fast
 
-Con:
+**Con:**
 
 Still huge variation in results (37.8 - 41).
 
@@ -33,11 +33,11 @@ Still huge variation in results (37.8 - 41).
 
 Use Probability for the first three ships and simulation for the last two.
 
-Pro:
+**Pro:**
 
 Good results on a more consistent basis.
 
-Con:
+**Con:**
 
 A little slower, results ranging from 37.5 – 39.5, 37.5 being more of a lucky punch than a consistently repeatable number.
 
@@ -48,10 +48,10 @@ Then I tried calculating the density based on the previously played games -> Sim
 So I wrote a little “Compiler” -> Codeworx.Battleship.Generator that was able to compile a decision tree for the collected data. 
 The collected data sample was large enough to provide very repeatable results for the first 10 shots. The following shots were calculated by the density function.
 
-Pro:
+**Pro:**
 
 If the collected data matches the current “random” pattern you get regularly below 37.5, the lowest number I’ve seen locally was 37.17. Otherwise the results were still extremely consistent between 37.8 and 38.5
 
-Con:
+**Con:**
 
 You need multiple datasets, one for each “random” pattern and you need to try multiple compiled decision trees to see which one is currently the best one.
